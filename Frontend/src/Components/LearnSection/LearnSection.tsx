@@ -4,7 +4,7 @@ import React from "react";
 const LearnSection: React.FC = () => {
   return (
     <>
-      <div>52</div>
+      <div>52 53 54 55 - Oboudnoe sochinenie</div>
     </>
   );
 };
