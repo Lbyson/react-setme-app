@@ -1,0 +1,39 @@
+.button {
+  background: linear-gradient(270deg, #6e8efb, #a777e3, #646cff, #6e8efb);
+  background-size: 600% 600%;
+  animation: gradientShift 4s ease infinite;
+
+  padding: 0.8em 1em;
+  border: none;
+  border-radius: 30%;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button.bright {
+  background: linear-gradient(270deg, #2c2c2c, #ffffff, #9e9e9e, #2c2c2c);
+  background-size: 600% 600%;
+  animation: gradientShiftGray 4s ease infinite;
+  outline: none;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.themeImages {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.themeImages:hover {
+  transform: scale(1.2);
+}

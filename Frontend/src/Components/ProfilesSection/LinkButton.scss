@@ -1,0 +1,85 @@
+.linkButton {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    transition:
+      background 0.3s ease,
+      color 0.3s ease,
+      box-shadow 0.3s ease,
+      transform 0.2s ease;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+.linkButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+    transform: skewX(-20deg);
+    transition: left 0.5s ease;
+    pointer-events: none;
+}
+
+.linkButton:hover::before {
+    left: 100%;
+}
+
+/* bright-theme */
+.bright-theme .linkButton {
+    background: linear-gradient(135deg, #ffffff, #e9ecef);
+    color: #0d6efd;
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.15);
+}
+
+.bright-theme .linkButton:hover {
+    background: linear-gradient(135deg, #f1f3f5, #dee2e6);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(13, 110, 253, 0.25);
+}
+
+.bright-theme .linkButton:active {
+    background: #ced4da;
+    transform: scale(0.98);
+    box-shadow: 0 3px 6px rgba(13, 110, 253, 0.15);
+}
+
+.bright-theme .linkButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.3);
+}
+
+/* dark-theme */
+.dark-theme .linkButton {
+    background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+    color: #00eaff;
+    box-shadow: 0 0 12px rgba(0, 234, 255, 0.2);
+}
+
+.dark-theme .linkButton:hover {
+    background: linear-gradient(135deg, #222, #333);
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(0, 234, 255, 0.3);
+}
+
+.dark-theme .linkButton:active {
+    background: #111;
+    transform: scale(0.98);
+    box-shadow: 0 0 8px rgba(0, 234, 255, 0.2);
+}
+
+.dark-theme .linkButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 234, 255, 0.4);
+}

@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/Fonts/Roboto-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+:where(h1,h2,h3,h4,h5,h6,p,ul,ol,dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(ul[class]) {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input, textarea, select, button {
+  font: inherit;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --layer-tooltip: 100;
+  --layer-menu: 200;
+  --layer-modal: 300;
+  --layer-admin-panel: 1000;
+}
+
+body.bright-theme {
+  background-color: aliceblue;
+  color: #242424;
+}
+
+body.dark-theme {
+  background-color: #242424;
+  color: aliceblue;
+}
+
+@media (hover: hover) {
+  button:hover,
+  a:hover,
+  .interactive:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+@media (hover: none) {
+  button:active,
+  a:active,
+  .interactive:active {
+    filter: brightness(0.95);
+    transform: scale(0.98);
+  }
+}
